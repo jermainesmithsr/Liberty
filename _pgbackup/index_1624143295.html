@@ -16,6 +16,45 @@
         <link rel="stylesheet" type="text/css" href="css/vendor/font-awesome/dist/font-awesome-animation.min.css"/> 
         <!-- CUSTOM CSS -->         
         <link rel="stylesheet" type="text/css" href="css/custom/style.css"> 
+        <script>
+        $('body').append(`
+    <div class="lightbox">
+      <a href="#lightbox" class="lightbox-close lightbox-toggle">X</a>
+      <div class="lightbox-container">
+        <div class="row">
+          <div class="col-sm-12 lightbox-column">
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  `);
+
+$('.lightbox-toggle').on('click', (event) => {
+  event.preventDefault();
+  $('.lightbox').fadeToggle('fast');
+  
+  let context = $(event.currentTarget).attr('data-lightbox-type');
+  let content = $(event.currentTarget).attr('data-lightbox-content');
+  console.log(event);
+  if (context == 'video') {
+    $('.lightbox-column').append(`
+        <div class="lightbox-video">
+        <iframe src="${content}" frameborder="0" allowfullscreen> </iframe>
+        </div>
+    `);
+  } else if (context == 'image') {
+    $('.lightbox-column').append(`
+        <img src="${content}" class="img-" frameborder="0" allowfullscreen>
+    `);
+  }
+});
+
+$('.lightbox-close').on('click', (event) => {
+  event.preventDefault();
+  $('.lightbox-column > *').remove();
+});
+        </script>
     </head>     
     <body data-spy="scroll" data-target=".navbar-fixed-top" data-offset="75"> 
         <!-- PAGE LAYOUT STARTS HERE -->         
@@ -45,12 +84,12 @@
 									About </a> 
                             </li>                             
                             <li class="menu"> 
-                                <a href="#organizations" class="pagescroll"> 
-								Organizations </a> 
-                            </li>                             
+                                <a href="#ourgoals" class="pagescroll"> 
+								Our Goals </a> 
+                            </li>
                             <li class="menu"> 
-                                <a href="https://docs.google.com/forms/d/1ZtoAp5FbyEPJ2_s3ZGowACh7OadxWZTA_gFXHhm-B6M/viewform?edit_requested=true" class="pagescroll"> 
-								Join US </a> 
+                                <a href="#joinus" class="pagescroll"> 
+								Join Us</a> 
                             </li>                             
                         </ul>                         
                     </div>                     
@@ -66,7 +105,7 @@
                     <div class="col-sm-12 header-div text-center"> 
                         <h1>Introducing the Liberty Ecosystem</h1> 
                         <p style="padding-bottom: 15px;">Building a brighter sustainable future through collective ownership and collaboration</p>
-                        <a href="https://docs.google.com/forms/d/1ZtoAp5FbyEPJ2_s3ZGowACh7OadxWZTA_gFXHhm-B6M/viewform?edit_requested=true" class="btn btn-1">Get Involved</a>
+                        <a href="https://docs.google.com/forms/d/1ZtoAp5FbyEPJ2_s3ZGowACh7OadxWZTA_gFXHhm-B6M/viewform?edit_requested=true" class="btn btn-1">Join Us</a>
                     </div>                     
                 </div>                 
             </div>             
@@ -79,16 +118,25 @@
             <div class="container-fluid no_padding"> 
                 <div class="row no-row"> 
                     <div class="col-sm-6 who-care-img">
-                        <img src="images/play_overlay.png" style="margin: auto; object-fit: cover; opacity: .7;" width="100%"/>
+                        <div class="blackOut">
+                            <div class="popupAlignCenter">
+                                <!-- popup content populates here -->
+                            </div>
+                        </div>
+                        <div class="videoPopup">
+                            <a href="javascript:void(0)" onclick="videoPopupItem.launchPopUp();"> <img src="images/play_overlay.png" style="margin: auto; object-fit: cover; opacity: .6;" width="100%"/> </a>
+                        </div>
                     </div>                     
                     <div class="col-sm-6 who-care-col"> 
                         <div class="heading-div-1"> 
-                            <p>Our Mission</p> 
-                            <h2>About Liberty</h2> 
+                            <p>ABOUT</p> 
+                            <h2>Liberty ecosystem</h2> 
                             <img src="images/100x3.png" alt="100x3"/> 
                         </div>                         
                         <div class="who-care-col-1"> 
-                            <p style="font-size: 21px; line-height: 32px;"> A healthy ecosystem provides for all its residents. The current economic system in South LA is overrun by outside developers who extract wealth from the community, denying us the right to self-determination and community building. Liberty Ecosystem seeks to liberate the Crenshaw community with non-extractive financing and social impact investing, creating a self-sustaining, democratically governed economy. </p> 
+                            <p style="font-size: 21px; line-height: 32px;"><b>OUR MISSION:</b><br>We believe that building healthy and sustainable neighborhoods requires a community to control its resources.</p>
+                            <br>
+                            <p style="font-size: 21px; line-height: 32px;"><b>OUR CHARGE:</b><br>Our solution must match the scale of the problem. We have to think big, because our challenge is big.</p>
                         </div>                         
                     </div>                     
                 </div>                 
@@ -96,63 +144,15 @@
         </section>         
         <!--================================= WHO WE CARE ENDS ==========================================-->         
         <!--================================= HELPS TO REDUCE START ==========================================-->         
-        <section>
+        <section id="ourgoals">
             <div class="structure">
-                <img src="images/liberty.png"/>
+                <img src="images/goals.png" style="width: 100%;"/>
+                <img src="images/goals2.png" style="width: 100%;"/>
             </div>
             <div class="mobile_structure">
                 <img src="images/mobile1.png"/>
-                <img src="images/mobile2.png"/>
+                <img src="images/mobile_text.png"/>
             </div>
-        </section>
-        <section class="section-padding section-1-bg" id="organizations"> 
-            <div class="container"> 
-                <div class="heading-div text-center"> 
-                    <h2>Our Family of Organizations</h2> 
-                    <img src="images/90x10x1.png" alt="90x10"/> 
-                </div>                 
-                <div class="row help-reduce-div"> 
-                    <div class="col-sm-6 help-reduce-col"> 
-                        <div class="row help-reduce-row-1 help-reduce-row-2 help-reduce-space"> 
-                            <div class="col-xs-12"> 
-                                <a href="/land-trust.html"><h3>Liberty Community Land Trust</h3></a> 
-                                <p> Liberty Community Land Trust (LCLT) is the only Black-led, Black focused community land trust operating in California. As housing prices in surrounding neighborhoods skyrocket, LCLT is focused on acquiring housing in the areas surrounding the mall to preserve affordable housing, eventually transitioning tenants into owners of housing cooperatives. </p>
-                                <a href="/land-trust.html">Learn More</a> 
-                            </div>                             
-                        </div>                         
-                        <div class="row help-reduce-row-1 help-reduce-row-2 help-reduce-space"> 
-                            <div class="col-xs-12 col-sm-12 col-md-12"> 
-                                <a href="/community-empowerment.html"><h3>Liberty Community Empowerment</h3></a> 
-                                <p> In any community-centered economic ecosystem, a local source of financing and capital is vital to ensure that responsible community development is prioritized. Liberty Community Empowerment is a source for non-extractive financing that builds community wealth by increasing home ownership and entrepreneurship. </p>
-                                <a href="/community-empowerment.html">Learn More</a> 
-                            </div>                             
-                        </div>                         
-                        <div class="row help-reduce-row-1 help-reduce-row-3 help-reduce-space"> 
-                            <div class="col-xs-12"> 
-                                <a href="https://www.crenshawsubway.org/the_umoja_center"><h3>Umoja Center</h3></a> 
-                                <p>Named after the Swahili word meaning "unity," the Umoja Center is a home for connecting our Crenshaw community specifically and the local Black community generally to the global struggle for justice. </p>
-                                <a href="https://www.crenshawsubway.org/the_umoja_center">Learn More</a> 
-                            </div>                             
-                        </div>                         
-                    </div>                     
-                    <div class="col-sm-6 help-reduce-col"> 
-                        <div class="row help-reduce-row-1 help-reduce-row-2 help-reduce-space"> 
-                            <div class="col-xs-12"> 
-                                <a href="https://www.crenshawsubway.org/"><h3>Crenshaw Subway Coalition</h3></a> 
-                                <p>Established in 2011 as an independent organization, the Crenshaw Subway Coalition seeks to advance community involvement in the Crenshaw-LAX Light Rail Project and Crenshaw Boulevard development process. </p>
-                                <a href="https://www.crenshawsubway.org/">Learn More</a> 
-                            </div>                             
-                        </div>                         
-                        <div class="row help-reduce-row-1 help-reduce-row-2 help-reduce-space"> 
-                            <div class="col-xs-12"> 
-                                <a href="https://www.downtowncrenshaw.com/"><h3>Downtown Crenshaw Rising</h3></a> 
-                                <p>Downtown Crenshaw is a legacy-defining collaborative project to purchase and develop the Baldwin Hills Crenshaw Mall into a net positive urban village with just over 40 acres of quality retail, restaurants, and grocery options, beautiful housing affordable, professional office space to encourage collaboration among our business enterprises, a hotel, entertainment space, and green space.This would all be grounded in the principles of community-wealth building, matched with a neighborhood stabilization fund and featuring community ownership at every stage. </p>
-                                <a href="https://www.downtowncrenshaw.com/">Learn More</a> 
-                            </div>                             
-                        </div>                         
-                    </div>                     
-                </div>                 
-            </div>             
         </section>         
         <!--================================= HELPS TO REDUCE ENDS ==========================================-->         
         <!--================================= CAMPS WE DONE START ==========================================-->         
@@ -162,12 +162,12 @@
         <!--================================= OUR INVOLVEMENTS START ==========================================-->         
         <!--================================= OUR INVOLVEMENTS ENDS ==========================================-->         
         <!--================================= ORPHAN CHILDREN START ==========================================-->         
-        <section class="section-padding orphan-children-section"> 
+        <section class="section-padding orphan-children-section" id="joinus"> 
             <div class="container"> 
                 <div class="col-sm-12 orphan-children-col text-center"> 
                     <h2>Let’s Get to Work</h2> 
                     <p>Sign up to join Liberty’s effort to breathe new life into our local economy </p> 
-                    <a href="https://docs.google.com/forms/d/1ZtoAp5FbyEPJ2_s3ZGowACh7OadxWZTA_gFXHhm-B6M/viewform?edit_requested=true" class="btn btn-1">Get Invovled</a> 
+                    <a href="https://docs.google.com/forms/d/1ZtoAp5FbyEPJ2_s3ZGowACh7OadxWZTA_gFXHhm-B6M/viewform?edit_requested=true" class="btn btn-1">Join Us</a> 
                 </div>                 
             </div>             
         </section>         
@@ -220,5 +220,42 @@
         <!-- THEME JS -->         
         <script src="js/custom/custom.js"></script>         
         <!-- CUSTOM -->
+        <script>
+        function videoPopup(objectName, videoUrl){
+  this.videoUrl= videoUrl;
+  this.screenSize= $(window).width();
+  this.heightOfVideo= this.screenSize * .4;
+  this.videoPop= '<div class="popUpWrapper">'+
+                    '<div id="videoWrap"">'+
+                    '<button type="button" class="videoClose" onclick="'+objectName+'.closeVideo()">X</button>'+
+                    '<iframe width="100%" height="'+this.heightOfVideo+'" src="'+this.videoUrl+'" frameborder="0" allowfullscreen></iframe></div>'+
+                  '</div>', 
+  this.closeVideo= function(){
+    $('.blackOut').fadeOut('slow');
+    $('.popupAlignCenter').html("");
+  },
+  this.launchPopUp= function(){
+    $(window).scroll(function() { return false; });
+    if($('.blackOut').css('display')=="none"){
+        $('.blackOut').fadeIn('slow');
+    }
+    $('.blackOut').css('z-index','1000');
+    $('.popupAlignCenter').html(this.videoPop);
+    $('.popUpWrapper').fadeIn('slow'); 
+  }
+};
+
+$(document).mouseup(function (e) {
+  var container = $(".popUpWrapper");
+  if($('.blackOut').css('z-index')!="0"){
+    if (!container.is(e.target) && container.has(e.target).length === 0){
+      $('.blackOut').fadeOut('slow');
+     }
+  }
+});
+
+var videoPopupItem= new videoPopup('videoPopupItem', 'https://www.youtube.com/embed/JgSQZQctqJM');
+
+        </script>
     </body>     
 </html>
