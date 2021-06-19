@@ -598,7 +598,6 @@ h6 {
 .orphan-children-section {
     background-image: url('../../images/image2.jpg');
     background-attachment: fixed;
-    margin-top: 80px;
 }
 
 @media (max-width:480px) {
@@ -1396,4 +1395,10 @@ select {
     background: none;
     border: 0;
     cursor: pointer;
+}
+
+.buy_button {
+    padding: 20px 30px;
+    color: white;
+    border: solid 1px #ffffff;
 }

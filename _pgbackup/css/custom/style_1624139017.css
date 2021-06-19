@@ -69,7 +69,7 @@ p {
 }
 
 h2,
-h3 {
+h3 {
     color: #333333;
 }
 
@@ -94,11 +94,11 @@ h3 {
 }
 
 h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: 'Raleway', serif;
     letter-spacing: 1px;
 }
@@ -213,7 +213,7 @@ h1,
 }
 
 .heading-div-2,
-.heading-div {
+.heading-div {
     padding-bottom: 50px;
 }
 
@@ -224,8 +224,8 @@ h1,
 }
 
 .orphan-children-section,
-.who-care-img,
-.header-image {
+.who-care-img,
+.header-image {
     background-position: center center;
     background-size: cover;
 }
@@ -249,10 +249,10 @@ h1,
 /* ========================================== 2.COMMON CSS END =========================================== */
 /* ========================================== 3.THEME COLOR START ============================================ */
 .navbar-default .navbar-nav.clearfix.fixed-header> li > a.active,
-.navbar-default .navbar-nav > li > a.active,
-.navbar-default .navbar-nav > .active > a,
-.navbar-default .navbar-nav > .active > a:focus,
-.navbar-default .navbar-nav > .active > a:hover {
+.navbar-default .navbar-nav > li > a.active,
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:focus,
+.navbar-default .navbar-nav > .active > a:hover {
     background-color: none;
     color: #fea501 !important;
     border-bottom: 1px dotted #fea501;
@@ -303,6 +303,7 @@ h1,
 
 .navbar {
     border-radius: 0;
+    background-color: #ffffff;
 }
 
 .navbar-nav {
@@ -349,13 +350,13 @@ h1,
 }
 
 .btn:focus,
-.btn:hover {
+.btn:hover {
     color: #ffffff;
 }
 
 .btn.btn-1 {
-    background-color: #ffffff;
-    color: #fea501;
+    background-color: #010101;
+    color: #ffffff;
 }
 
 .btn-cancel {
@@ -372,9 +373,19 @@ h1,
 /* ================================================ 5.BUTTON ENDS ========================================== */
 /* ======================================= 6.SECTION : HEADER START ======================================== */
 .header-image {
-    background-image: url('../../images/JuneteenthBLMProtestLA2020_DSC_8527.jpg');
+    background-image: url('../../images/image4.jpg');
     padding-bottom: 50px;
     padding-top: 450px;
+    background-attachment: fixed;
+}
+
+@media (max-width:480px) {
+    .header-image {
+        background-image: url('../../images/image4.jpg');
+        padding-bottom: 50px;
+        padding-top: 450px;
+        background-attachment: initial;
+    }
 }
 
 .header-div,
@@ -387,7 +398,7 @@ h1,
 .header-div p,
 .header2-div p {
     color: #ffffff;
-    font-size: 14px;
+    font-size: 22px;
     letter-spacing: 0.5px;
     line-height: 28px;
     text-transform: uppercase;
@@ -442,8 +453,8 @@ h1,
 }
 
 .progress-bar-inner-3,
-.progress-bar-inner-2,
-.progress-bar-inner-1 {
+.progress-bar-inner-2,
+.progress-bar-inner-1 {
     background-color: #115145;
     height: 3px;
     position: absolute;
@@ -471,7 +482,7 @@ h1,
 /* ============================================= 7.SECTION : VARIOUS CAUSES END =============================================== */
 /* ============================================= 8.SECTION : WHO WE CARE START =============================================== */
 .who-care-img {
-    background-image: url("../../images/960x540.jpg");
+    background-image: url('../../images/JuneteenthBLMProtestLA2020_DSC_8519.jpg');
     height: 535px;
 }
 
@@ -480,7 +491,7 @@ h1,
 }
 
 .section-3-bg p,
-.section-3-bg h2 {
+.section-3-bg h2 {
     color: #ffffff;
 }
 
@@ -521,6 +532,7 @@ h1,
 
 .help-reduce-col  h3 {
     margin-top: 0;
+    text-decoration: underline;
 }
 
 .camps-done-col p {
@@ -584,16 +596,26 @@ h1,
 }
 
 .orphan-children-section {
-    background-image: url("../../images/1500x700.jpg");
+    background-image: url('../../images/image2.jpg');
+    background-attachment: fixed;
+    margin-top: 80px;
+}
+
+@media (max-width:480px) {
+    .orphan-children-section {
+        background-image: url('../../images/image2.jpg');
+        background-attachment: initial;
+        margin-top: 80px;
+    }
 }
 
 .orphan-children-col {
-    background-color: #fea501;
+    background-color: rgba(17, 81, 69, 0.74);
     padding: 40px 10px 60px 10px;
 }
 
 .orphan-children-col p,
-.orphan-children-col h2 {
+.orphan-children-col h2 {
     color: #ffffff;
 }
 
@@ -766,12 +788,12 @@ h1,
 }
 
 .happiest-col h3,
-.wonderful-col h3 {
+.wonderful-col h3 {
     padding-top: 0px;
 }
 
 .happiest-col p,
-.wonderful-col p {
+.wonderful-col p {
     padding: 10px 0 20px 0;
 }
 
@@ -882,7 +904,7 @@ label.error {
 }
 
 .popup-form select,
-.popup-form input {
+.popup-form input {
     font-size: 15px;
     font-weight: 600;
     height: 50px;
@@ -901,10 +923,10 @@ select {
 }
 
 .name,
-.email,
-.phoneno,
-#amounts,
-#price-1 {
+.email,
+.phoneno,
+#amounts,
+#price-1 {
     padding-left: 8px;
     padding-right: 8px;
 }
@@ -996,8 +1018,8 @@ select {
     }
 
     .contact-row,
-    	.testimonial-div,
-    	.donators-profile {
+    	.testimonial-div,
+    	.donators-profile {
         width: 100%;
     }
 
@@ -1059,29 +1081,29 @@ select {
     }
 
     .contact-row  .col-xs-6,
-    	.help-reduce-row-1 .col-xs-10,
-    	.help-reduce-row-1 .col-xs-2,
-    	.help-reduce-row-1,
-    	.news-row .col-xs-10,
-    	.news-row .col-xs-1,
-    	.news-row {
+    	.help-reduce-row-1 .col-xs-10,
+    	.help-reduce-row-1 .col-xs-2,
+    	.help-reduce-row-1,
+    	.news-row .col-xs-10,
+    	.news-row .col-xs-1,
+    	.news-row {
         margin: 0 auto;
         text-align: center;
         width: 100%;
     }
 
     .help-reduce-space,
-    	.news-space {
+    	.news-space {
         padding-bottom: 40px;
     }
 
     .help-reduce-row-1 .col-xs-2 img,
-    	.news-row .col-xs-1 img {
+    	.news-row .col-xs-1 img {
         padding-bottom: 20px;
     }
 
     .sponsors-row .col-xs-6,
-    	.sponsors-row {
+    	.sponsors-row {
         margin: 0 auto;
         width: 200px;
     }
@@ -1103,14 +1125,14 @@ select {
     }
 
     .btn-cancel ,
-    	#donate-btn {
+    	#donate-btn {
         width: 100%;
     }
 }
 
 @media only screen and (min-width: 481px) and (max-width: 767px) {
     .donators-details,
-    	.donators-profile {
+    	.donators-profile {
         width: 460px;
     }
 
@@ -1189,8 +1211,8 @@ select {
     }
 
     .who-care-col,
-    	.who-care-img,
-    	.contact-row {
+    	.who-care-img,
+    	.contact-row {
         width: 100%;
     }
 
@@ -1211,41 +1233,41 @@ select {
     }
 
     .blog-img,
-    	.blog-col,
-    	.happiest-col,
-    	.happiest-img,
-    	.wonderful-col,
-    	.wonderful-img,
-    	.events-second-row .events-img,
-    	.events-second-row .events-col,
-    	.events-row-1 .events-img,
-    	.events-row-1 .events-col,
-    	.volunteers-row-2 .col-sm-6,
-    	.volunteers-row-1 .col-sm-6,
-    	.relief-camp .col-sm-6 {
+    	.blog-col,
+    	.happiest-col,
+    	.happiest-img,
+    	.wonderful-col,
+    	.wonderful-img,
+    	.events-second-row .events-img,
+    	.events-second-row .events-col,
+    	.events-row-1 .events-img,
+    	.events-row-1 .events-col,
+    	.volunteers-row-2 .col-sm-6,
+    	.volunteers-row-1 .col-sm-6,
+    	.relief-camp .col-sm-6 {
         margin: 0 auto;
         text-align: center;
         width: 100%;
     }
 
     .blog-img img,
-    	.happiest-img img,
-    	.wonderful-img img,
-    	.events-second-row .events-img img,
-    	.events-row-1 .col-sm-6 img,
-    	.volunteers-row-2 .col-sm-6 img,
-    	.volunteers-row-1 .col-sm-6 img,
-    	.relief-camp .col-sm-6 img {
+    	.happiest-img img,
+    	.wonderful-img img,
+    	.events-second-row .events-img img,
+    	.events-row-1 .col-sm-6 img,
+    	.volunteers-row-2 .col-sm-6 img,
+    	.volunteers-row-1 .col-sm-6 img,
+    	.relief-camp .col-sm-6 img {
         margin: 0 auto;
     }
 
     .col-sm-push-6.happiest-img,
-    	.volunteers-row-2  .col-sm-push-6 {
+    	.volunteers-row-2  .col-sm-push-6 {
         left: 0;
     }
 
     .col-sm-pull-6.happiest-col ,
-    	.volunteers-row-2  .col-sm-pull-6 {
+    	.volunteers-row-2  .col-sm-pull-6 {
         right: 0;
     }
 
@@ -1305,9 +1327,9 @@ select {
     }
 
     .moving-col img,
-    	.involvements-col img,
-    	.camps-done-col img,
-    	.various-col img {
+    	.involvements-col img,
+    	.camps-done-col img,
+    	.various-col img {
         padding-bottom: 20px;
     }
 
@@ -1326,3 +1348,52 @@ select {
 }
 
 /* ============================================= 17.SECTION : MEDIA QUERIES END =============================================== */
+@media (max-width:480px) {
+    .structure {
+        display: none;
+    }
+}
+
+@media (min-width:481px) {
+    .mobile_structure {
+        display: none;
+    }
+}
+
+.blackOut {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 0;
+    top: 0;
+    bottom: 0;
+    display: none;
+}
+
+.blackOut .popupAlignCenter {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.blackOut .popupAlignCenter .popUpWrapper {
+    width: 80%;
+    max-width: 1280px;
+    max-height: 640px;
+    background-color: #fff;
+    z-index: 100;
+}
+
+.blackOut .popupAlignCenter .popUpWrapper button.videoClose {
+    color: #999999;
+    font-weight: 600;
+    font-size: 22px;
+    padding: 4px 10px;
+    float: right;
+    background: none;
+    border: 0;
+    cursor: pointer;
+}
