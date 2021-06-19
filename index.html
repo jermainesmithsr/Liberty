@@ -118,7 +118,14 @@ $('.lightbox-close').on('click', (event) => {
             <div class="container-fluid no_padding"> 
                 <div class="row no-row"> 
                     <div class="col-sm-6 who-care-img">
-                        <a href="#lightbox" class="lightbox-toggle" data-lightbox-type="video" data-lightbox-content="https://www.youtube.com/embed/lapu8oJLtzY"><img src="images/play_overlay.png" style="margin: auto; object-fit: cover; opacity: .7; display: none;" width="100%"/></a>
+                        <div class="blackOut">
+                            <div class="popupAlignCenter">
+                                <!-- popup content populates here -->
+                            </div>
+                        </div>
+                        <div class="videoPopup">
+                            <a href="javascript:void(0)" onclick="videoPopupItem.launchPopUp();"> <img src="images/play_overlay.png" style="margin: auto; object-fit: cover; opacity: .6;" width="100%"/> </a>
+                        </div>
                     </div>                     
                     <div class="col-sm-6 who-care-col"> 
                         <div class="heading-div-1"> 
@@ -259,5 +266,42 @@ $('.lightbox-close').on('click', (event) => {
         <!-- THEME JS -->         
         <script src="js/custom/custom.js"></script>         
         <!-- CUSTOM -->
+        <script>
+        function videoPopup(objectName, videoUrl){
+  this.videoUrl= videoUrl;
+  this.screenSize= $(window).width();
+  this.heightOfVideo= this.screenSize * .4;
+  this.videoPop= '<div class="popUpWrapper">'+
+                    '<div id="videoWrap"">'+
+                    '<button type="button" class="videoClose" onclick="'+objectName+'.closeVideo()">X</button>'+
+                    '<iframe width="100%" height="'+this.heightOfVideo+'" src="'+this.videoUrl+'" frameborder="0" allowfullscreen></iframe></div>'+
+                  '</div>', 
+  this.closeVideo= function(){
+    $('.blackOut').fadeOut('slow');
+    $('.popupAlignCenter').html("");
+  },
+  this.launchPopUp= function(){
+    $(window).scroll(function() { return false; });
+    if($('.blackOut').css('display')=="none"){
+        $('.blackOut').fadeIn('slow');
+    }
+    $('.blackOut').css('z-index','1000');
+    $('.popupAlignCenter').html(this.videoPop);
+    $('.popUpWrapper').fadeIn('slow'); 
+  }
+};
+
+$(document).mouseup(function (e) {
+  var container = $(".popUpWrapper");
+  if($('.blackOut').css('z-index')!="0"){
+    if (!container.is(e.target) && container.has(e.target).length === 0){
+      $('.blackOut').fadeOut('slow');
+     }
+  }
+});
+
+var videoPopupItem= new videoPopup('videoPopupItem', 'https://www.youtube.com/embed/c__AD5FsjlE');
+
+        </script>
     </body>     
 </html>
