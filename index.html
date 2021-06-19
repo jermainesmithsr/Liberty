@@ -16,6 +16,45 @@
         <link rel="stylesheet" type="text/css" href="css/vendor/font-awesome/dist/font-awesome-animation.min.css"/> 
         <!-- CUSTOM CSS -->         
         <link rel="stylesheet" type="text/css" href="css/custom/style.css"> 
+        <script>
+        $('body').append(`
+    <div class="lightbox">
+      <a href="#lightbox" class="lightbox-close lightbox-toggle">X</a>
+      <div class="lightbox-container">
+        <div class="row">
+          <div class="col-sm-12 lightbox-column">
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  `);
+
+$('.lightbox-toggle').on('click', (event) => {
+  event.preventDefault();
+  $('.lightbox').fadeToggle('fast');
+  
+  let context = $(event.currentTarget).attr('data-lightbox-type');
+  let content = $(event.currentTarget).attr('data-lightbox-content');
+  console.log(event);
+  if (context == 'video') {
+    $('.lightbox-column').append(`
+        <div class="lightbox-video">
+        <iframe src="${content}" frameborder="0" allowfullscreen> </iframe>
+        </div>
+    `);
+  } else if (context == 'image') {
+    $('.lightbox-column').append(`
+        <img src="${content}" class="img-" frameborder="0" allowfullscreen>
+    `);
+  }
+});
+
+$('.lightbox-close').on('click', (event) => {
+  event.preventDefault();
+  $('.lightbox-column > *').remove();
+});
+        </script>
     </head>     
     <body data-spy="scroll" data-target=".navbar-fixed-top" data-offset="75"> 
         <!-- PAGE LAYOUT STARTS HERE -->         
@@ -79,14 +118,7 @@
             <div class="container-fluid no_padding"> 
                 <div class="row no-row"> 
                     <div class="col-sm-6 who-care-img">
-                        <div class="blackOut">
-                            <div class="popupAlignCenter">
-                                <!-- popup content populates here -->
-                            </div>
-                        </div>
-                        <div class="videoPopup">
-                            <a href="javascript:void(0)" onclick="videoPopupItem.launchPopUp();"> <img src="images/play_overlay.png" style="margin: auto; object-fit: cover; opacity: .7;" width="100%"/> </a>
-                        </div>
+                        <a href="#lightbox" class="lightbox-toggle" data-lightbox-type="video" data-lightbox-content="https://www.youtube.com/embed/lapu8oJLtzY"><img src="images/play_overlay.png" style="margin: auto; object-fit: cover; opacity: .7; display: none;" width="100%"/></a>
                     </div>                     
                     <div class="col-sm-6 who-care-col"> 
                         <div class="heading-div-1"> 
@@ -105,7 +137,7 @@
         <!--================================= HELPS TO REDUCE START ==========================================-->         
         <section>
             <div class="structure">
-                <img src="images/liberty.png"/>
+                <img src="images/liberty.png" style="width: 100%;"/>
             </div>
             <div class="mobile_structure">
                 <img src="images/mobile1.png"/>
@@ -227,42 +259,5 @@
         <!-- THEME JS -->         
         <script src="js/custom/custom.js"></script>         
         <!-- CUSTOM -->
-        <script>
-        function videoPopup(objectName, videoUrl){
-  this.videoUrl= videoUrl;
-  this.screenSize= $(window).width();
-  this.heightOfVideo= this.screenSize * .4;
-  this.videoPop= '<div class="popUpWrapper">'+
-                    '<div id="videoWrap"">'+
-                    '<button type="button" class="videoClose" onclick="'+objectName+'.closeVideo()">X</button>'+
-                    '<iframe width="100%" height="'+this.heightOfVideo+'" src="'+this.videoUrl+'" frameborder="0" allowfullscreen></iframe></div>'+
-                  '</div>', 
-  this.closeVideo= function(){
-    $('.blackOut').fadeOut('slow');
-    $('.popupAlignCenter').html("");
-  },
-  this.launchPopUp= function(){
-    $(window).scroll(function() { return false; });
-    if($('.blackOut').css('display')=="none"){
-        $('.blackOut').fadeIn('slow');
-    }
-    $('.blackOut').css('z-index','1000');
-    $('.popupAlignCenter').html(this.videoPop);
-    $('.popUpWrapper').fadeIn('slow'); 
-  }
-};
-
-$(document).mouseup(function (e) {
-  var container = $(".popUpWrapper");
-  if($('.blackOut').css('z-index')!="0"){
-    if (!container.is(e.target) && container.has(e.target).length === 0){
-      $('.blackOut').fadeOut('slow');
-     }
-  }
-});
-
-var videoPopupItem= new videoPopup('videoPopupItem', 'https://www.youtube.com/embed/JgSQZQctqJM');
-
-        </script>
     </body>     
 </html>
