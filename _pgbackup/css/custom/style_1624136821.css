@@ -379,15 +379,6 @@ h6 {
     background-attachment: fixed;
 }
 
-@media (max-width:480px) {
-    .header-image {
-        background-image: url('../../images/image4.jpg');
-        padding-bottom: 50px;
-        padding-top: 450px;
-        background-attachment: initial;
-    }
-}
-
 .header-div,
 .header2-div h1 {
     color: #ffffff;
@@ -599,14 +590,6 @@ h6 {
     background-image: url('../../images/image2.jpg');
     background-attachment: fixed;
     margin-top: 80px;
-}
-
-@media (max-width:480px) {
-    .orphan-children-section {
-        background-image: url('../../images/image2.jpg');
-        background-attachment: initial;
-        margin-top: 80px;
-    }
 }
 
 .orphan-children-col {

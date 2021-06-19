@@ -372,13 +372,6 @@ h6 {
 
 /* ================================================ 5.BUTTON ENDS ========================================== */
 /* ======================================= 6.SECTION : HEADER START ======================================== */
-.header-image {
-    background-image: url('../../images/image4.jpg');
-    padding-bottom: 50px;
-    padding-top: 450px;
-    background-attachment: fixed;
-}
-
 @media (max-width:480px) {
     .header-image {
         background-image: url('../../images/image4.jpg');
@@ -593,12 +586,6 @@ h6 {
 /* ============================================= 11.SECTION : ORPHAN CHILDREN START =============================================== */
 .involvements-col p {
     padding-bottom: 20px;
-}
-
-.orphan-children-section {
-    background-image: url('../../images/image2.jpg');
-    background-attachment: fixed;
-    margin-top: 80px;
 }
 
 @media (max-width:480px) {
