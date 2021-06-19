@@ -4,9 +4,9 @@
         <meta charset="utf-8"> 
         <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
         <meta name="viewport" content="width=device-width, initial-scale=1"> 
-        <title>Charity</title>         
+        <title>Liberty Ecosystem</title>         
         <!-- FAVICON LINK -->         
-        <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon"> 
+        <link rel="shortcut icon" href="#" type="image/x-icon"> 
         <!-- STYLESHEETS -->         
         <!-- Bootstrap CSS -->         
         <link rel="stylesheet" type="text/css" href="css/vendor/bootstrap.min.css"> 
@@ -16,6 +16,45 @@
         <link rel="stylesheet" type="text/css" href="css/vendor/font-awesome/dist/font-awesome-animation.min.css"/> 
         <!-- CUSTOM CSS -->         
         <link rel="stylesheet" type="text/css" href="css/custom/style.css"> 
+        <script>
+        $('body').append(`
+    <div class="lightbox">
+      <a href="#lightbox" class="lightbox-close lightbox-toggle">X</a>
+      <div class="lightbox-container">
+        <div class="row">
+          <div class="col-sm-12 lightbox-column">
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  `);
+
+$('.lightbox-toggle').on('click', (event) => {
+  event.preventDefault();
+  $('.lightbox').fadeToggle('fast');
+  
+  let context = $(event.currentTarget).attr('data-lightbox-type');
+  let content = $(event.currentTarget).attr('data-lightbox-content');
+  console.log(event);
+  if (context == 'video') {
+    $('.lightbox-column').append(`
+        <div class="lightbox-video">
+        <iframe src="${content}" frameborder="0" allowfullscreen> </iframe>
+        </div>
+    `);
+  } else if (context == 'image') {
+    $('.lightbox-column').append(`
+        <img src="${content}" class="img-" frameborder="0" allowfullscreen>
+    `);
+  }
+});
+
+$('.lightbox-close').on('click', (event) => {
+  event.preventDefault();
+  $('.lightbox-column > *').remove();
+});
+        </script>
     </head>     
     <body data-spy="scroll" data-target=".navbar-fixed-top" data-offset="75"> 
         <!-- PAGE LAYOUT STARTS HERE -->         
@@ -38,18 +77,18 @@
                         <ul class="nav navbar-nav navbar-right" id="menu-list"> 
                             <li class="menu"> 
                                 <a href="#home" class="pagescroll"> 
-								Home </a> 
+								Home </a> 
                             </li>                             
                             <li class="menu"> 
                                 <a href="#about" class="pagescroll"> 
-									About </a> 
+									About </a> 
                             </li>                             
                             <li class="menu"> 
                                 <a href="#organizations" class="pagescroll"> 
 								Organizations </a> 
-                            </li>                                                          
+                            </li>                             
                             <li class="menu"> 
-                                <a href="#" class="pagescroll"> 
+                                <a href="https://docs.google.com/forms/d/1ZtoAp5FbyEPJ2_s3ZGowACh7OadxWZTA_gFXHhm-B6M/viewform?edit_requested=true" class="pagescroll"> 
 								Join US </a> 
                             </li>                             
                         </ul>                         
@@ -66,7 +105,7 @@
                     <div class="col-sm-12 header-div text-center"> 
                         <h1>Introducing the Liberty Ecosystem</h1> 
                         <p style="padding-bottom: 15px;">Building a brighter sustainable future through collective ownership and collaboration</p>
-                        <a href="#" class="btn btn-1">Get Involved</a>
+                        <a href="https://docs.google.com/forms/d/1ZtoAp5FbyEPJ2_s3ZGowACh7OadxWZTA_gFXHhm-B6M/viewform?edit_requested=true" class="btn btn-1">Get Involved</a>
                     </div>                     
                 </div>                 
             </div>             
@@ -78,7 +117,9 @@
         <section class="section-3-bg who-care-section" id="about"> 
             <div class="container-fluid no_padding"> 
                 <div class="row no-row"> 
-                    <div class="col-sm-6 who-care-img"></div>                     
+                    <div class="col-sm-6 who-care-img">
+                        <a href="#lightbox" class="lightbox-toggle" data-lightbox-type="video" data-lightbox-content="https://www.youtube.com/embed/lapu8oJLtzY"><img src="images/play_overlay.png" style="margin: auto; object-fit: cover; opacity: .7;" width="100%"/></a>
+                    </div>                     
                     <div class="col-sm-6 who-care-col"> 
                         <div class="heading-div-1"> 
                             <p>Our Mission</p> 
@@ -90,10 +131,19 @@
                         </div>                         
                     </div>                     
                 </div>                 
-            </div>             
+            </div>
         </section>         
         <!--================================= WHO WE CARE ENDS ==========================================-->         
         <!--================================= HELPS TO REDUCE START ==========================================-->         
+        <section>
+            <div class="structure">
+                <img src="images/liberty.png"/>
+            </div>
+            <div class="mobile_structure">
+                <img src="images/mobile1.png"/>
+                <img src="images/mobile2.png"/>
+            </div>
+        </section>
         <section class="section-padding section-1-bg" id="organizations"> 
             <div class="container"> 
                 <div class="heading-div text-center"> 
@@ -156,12 +206,12 @@
                 <div class="col-sm-12 orphan-children-col text-center"> 
                     <h2>Let’s Get to Work</h2> 
                     <p>Sign up to join Liberty’s effort to breathe new life into our local economy </p> 
-                    <a href="#" class="btn btn-1">Get Invovled</a> 
+                    <a href="https://docs.google.com/forms/d/1ZtoAp5FbyEPJ2_s3ZGowACh7OadxWZTA_gFXHhm-B6M/viewform?edit_requested=true" class="btn btn-1">Get Invovled</a> 
                 </div>                 
             </div>             
         </section>         
         <!--================================= ORPHAN CHILDREN ENDS ==========================================-->         
-        <!--=================================  GALLERY START ==========================================-->                  
+        <!--=================================  GALLERY START ==========================================-->         
         <!--================================= GALLERY ENDS ==========================================-->         
         <!--=================================  NEWS START ==========================================-->         
         <!--================================= NEWS ENDS ==========================================-->         
@@ -198,72 +248,6 @@
             </div>             
         </footer>         
         <!--================================= FOOTER ENDS ==========================================-->         
-        <!-- POPUP FORM -->         
-        <div id="fadeandscale" class="popup-bg"> 
-            <div> 
-                <div style="padding:10px 15px 50px 0;"> 
-                    <button class="popup_close fadeandscale_close close close-icon-1" title="Close" aria-label="Close">
-                        <span aria-hidden="true">x</span>
-                    </button>                     
-                </div>                 
-                <div class="popup-bg-pad"> 
-                    <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="POST" class="popup-form" id="popup-form"> 
-                        <h2 class="donation-h2">Donation Form</h2> 
-                        <div class="row"> 
-                            <input class="name col-xs-12 col-sm-12" type="text" name="name" placeholder="Enter Your Name" required autocomplete="off"> 
-                            <input class="email col-xs-12 col-sm-12" type="email" name="email" placeholder="Enter Your Email" required autocomplete="off"> 
-                            <input class="phoneno col-xs-12 col-sm-12" type="text" name="phoneno" placeholder="Enter Your Phone Number" required autocomplete="off"> 
-                            <input class="phoneno col-xs-3 col-sm-3 price" type="text" name="amount" id="amounts" placeholder="Amount" autocomplete="off"> 
-                            <p class="col-xs-2 col-sm-2 or p-white">or</p> 
-                            <select name="amount" class="col-xs-7 col-sm-7 price" id="price-1"> 
-                                <option value="0">Choose the amount</option>                                 
-                                <option value="10">$10</option>                                 
-                                <option value="20">$20</option>                                 
-                                <option value="50">$50</option>                                 
-                            </select>                             
-                        </div>                         
-                        <input type="hidden" name="cmd" value="_xclick"> 
-                        <input type="hidden" name="item_name" value="DONATION"> 
-                        <input type="hidden" name="business" value=""> 
-                        <input type="hidden" name="currency_code" value=""> 
-                        <input type="hidden" name="return" value=""> 
-                        <input type="hidden" name="cancel_return" value=""> 
-                        <div class="row popup-btn-div"> 
-                            <input type="submit" name="submit" id="donate-btn" class="btn donate-bg col-xs-6 col-sm-6" value="Donate Now"> 
-                            <button class="popup_close fadeandscale_close btn btn-cancel col-xs-6 col-sm-offset-1 col-sm-4" title="Close" aria-label="Close">
-                                <span aria-hidden="true">CANCEL</span>
-                            </button>                             
-                        </div>                         
-                    </form>                     
-                </div>                 
-            </div>             
-        </div>         
-        <!-- POPUP MSG BOX -->         
-        <div id="messageDiv"> 
-            <div id="content"> 
-                <div id="success_btn"> 
-                    <a href="#" class="close close-icon">x</a> 
-                    <div class="cancel-head-pad"> 
-                        <h3 class="no-margin">Thank You For Donation</h3> 
-                    </div>                     
-                    <div class="text-center"> 
-                        <a href="#"><div class="ok-icon close">OK</div></a> 
-                    </div>                     
-                </div>                 
-            </div>             
-            <div id="content-1"> 
-                <div id="cancel_btn"> 
-                    <a href="#" class="close close-icon">x</a> 
-                    <div class="cancel-head-pad"> 
-                        <h3 class="no-margin">Sorry, Your Transaction Failed, Please Try Agian.</h3> 
-                    </div>                     
-                    <div class="text-center"> 
-                        <a href="#"><div class="ok-icon close">OK</div></a> 
-                    </div>                     
-                </div>                 
-            </div>             
-        </div>         
-        <div id="fade"></div>         
         <!-- JQUERY LIBRARY -->         
         <script src="js/vendor/jquery.min.js"></script>         
         <!-- BOOTSTRAP -->         
@@ -274,5 +258,6 @@
         <script src="js/vendor/popup/jquery.popupoverlay.js"></script>         
         <!-- THEME JS -->         
         <script src="js/custom/custom.js"></script>         
+        <!-- CUSTOM -->
     </body>     
 </html>
