@@ -16,45 +16,9 @@
         <link rel="stylesheet" type="text/css" href="css/vendor/font-awesome/dist/font-awesome-animation.min.css"/> 
         <!-- CUSTOM CSS -->         
         <link rel="stylesheet" type="text/css" href="css/custom/style.css"> 
-        <script>
-        $('body').append(`
-    <div class="lightbox">
-      <a href="#lightbox" class="lightbox-close lightbox-toggle">X</a>
-      <div class="lightbox-container">
-        <div class="row">
-          <div class="col-sm-12 lightbox-column">
-            
-          </div>
-        </div>
-      </div>
-    </div>
-  `);
-
-$('.lightbox-toggle').on('click', (event) => {
-  event.preventDefault();
-  $('.lightbox').fadeToggle('fast');
-  
-  let context = $(event.currentTarget).attr('data-lightbox-type');
-  let content = $(event.currentTarget).attr('data-lightbox-content');
-  console.log(event);
-  if (context == 'video') {
-    $('.lightbox-column').append(`
-        <div class="lightbox-video">
-        <iframe src="${content}" frameborder="0" allowfullscreen> </iframe>
-        </div>
-    `);
-  } else if (context == 'image') {
-    $('.lightbox-column').append(`
-        <img src="${content}" class="img-" frameborder="0" allowfullscreen>
-    `);
-  }
-});
-
-$('.lightbox-close').on('click', (event) => {
-  event.preventDefault();
-  $('.lightbox-column > *').remove();
-});
-        </script>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css"/>
     </head>     
     <body data-spy="scroll" data-target=".navbar-fixed-top" data-offset="75"> 
         <!-- PAGE LAYOUT STARTS HERE -->         
@@ -118,7 +82,7 @@ $('.lightbox-close').on('click', (event) => {
             <div class="container-fluid no_padding"> 
                 <div class="row no-row"> 
                     <div class="col-sm-6 who-care-img">
-                        <a href="#lightbox" class="lightbox-toggle" data-lightbox-type="video" data-lightbox-content="https://www.youtube.com/embed/lapu8oJLtzY"><img src="images/play_overlay.png" style="margin: auto; object-fit: cover; opacity: .7;" width="100%"/></a>
+                        <img class="popup-video" src="images/play_overlay.png" style="margin: auto; object-fit: cover; opacity: .7;" width="100%"/>
                     </div>                     
                     <div class="col-sm-6 who-care-col"> 
                         <div class="heading-div-1"> 
@@ -259,5 +223,17 @@ $('.lightbox-close').on('click', (event) => {
         <!-- THEME JS -->         
         <script src="js/custom/custom.js"></script>         
         <!-- CUSTOM -->
+        <script>
+$(function() {
+    $('.popup-video').magnificPopup({
+        disableOn: 700,
+        type: 'iframe',
+        mainClass: 'mfp-fade',
+        removalDelay: 160,
+        preloader: false,
+        fixedContentPos: false
+    });
+});
+</script>
     </body>     
 </html>

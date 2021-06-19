@@ -16,45 +16,6 @@
         <link rel="stylesheet" type="text/css" href="css/vendor/font-awesome/dist/font-awesome-animation.min.css"/> 
         <!-- CUSTOM CSS -->         
         <link rel="stylesheet" type="text/css" href="css/custom/style.css"> 
-        <script>
-        $('body').append(`
-    <div class="lightbox">
-      <a href="#lightbox" class="lightbox-close lightbox-toggle">X</a>
-      <div class="lightbox-container">
-        <div class="row">
-          <div class="col-sm-12 lightbox-column">
-            
-          </div>
-        </div>
-      </div>
-    </div>
-  `);
-
-$('.lightbox-toggle').on('click', (event) => {
-  event.preventDefault();
-  $('.lightbox').fadeToggle('fast');
-  
-  let context = $(event.currentTarget).attr('data-lightbox-type');
-  let content = $(event.currentTarget).attr('data-lightbox-content');
-  console.log(event);
-  if (context == 'video') {
-    $('.lightbox-column').append(`
-        <div class="lightbox-video">
-        <iframe src="${content}" frameborder="0" allowfullscreen> </iframe>
-        </div>
-    `);
-  } else if (context == 'image') {
-    $('.lightbox-column').append(`
-        <img src="${content}" class="img-" frameborder="0" allowfullscreen>
-    `);
-  }
-});
-
-$('.lightbox-close').on('click', (event) => {
-  event.preventDefault();
-  $('.lightbox-column > *').remove();
-});
-        </script>
     </head>     
     <body data-spy="scroll" data-target=".navbar-fixed-top" data-offset="75"> 
         <!-- PAGE LAYOUT STARTS HERE -->         
@@ -117,9 +78,7 @@ $('.lightbox-close').on('click', (event) => {
         <section class="section-3-bg who-care-section" id="about"> 
             <div class="container-fluid no_padding"> 
                 <div class="row no-row"> 
-                    <div class="col-sm-6 who-care-img">
-                        <a href="#lightbox" class="lightbox-toggle" data-lightbox-type="video" data-lightbox-content="https://www.youtube.com/embed/lapu8oJLtzY"><img src="images/play_overlay.png" style="margin: auto; object-fit: cover; opacity: .7;" width="100%"/></a>
-                    </div>                     
+                    <div class="col-sm-6 who-care-img"></div>                     
                     <div class="col-sm-6 who-care-col"> 
                         <div class="heading-div-1"> 
                             <p>Our Mission</p> 
@@ -131,7 +90,7 @@ $('.lightbox-close').on('click', (event) => {
                         </div>                         
                     </div>                     
                 </div>                 
-            </div>
+            </div>             
         </section>         
         <!--================================= WHO WE CARE ENDS ==========================================-->         
         <!--================================= HELPS TO REDUCE START ==========================================-->         
@@ -140,8 +99,8 @@ $('.lightbox-close').on('click', (event) => {
                 <img src="images/liberty.png"/>
             </div>
             <div class="mobile_structure">
-                <img src="images/mobile1.png"/>
-                <img src="images/mobile2.png"/>
+                <img src="http://pinegrow.com/placeholders/img11.jpg"/>
+                <img src="http://pinegrow.com/placeholders/img11.jpg"/>
             </div>
         </section>
         <section class="section-padding section-1-bg" id="organizations"> 
@@ -258,6 +217,5 @@ $('.lightbox-close').on('click', (event) => {
         <script src="js/vendor/popup/jquery.popupoverlay.js"></script>         
         <!-- THEME JS -->         
         <script src="js/custom/custom.js"></script>         
-        <!-- CUSTOM -->
     </body>     
 </html>

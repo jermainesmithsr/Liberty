@@ -69,7 +69,7 @@ p {
 }
 
 h2,
-h3 {
+h3 {
     color: #333333;
 }
 
@@ -94,11 +94,11 @@ h3 {
 }
 
 h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: 'Raleway', serif;
     letter-spacing: 1px;
 }
@@ -213,7 +213,7 @@ h6 {
 }
 
 .heading-div-2,
-.heading-div {
+.heading-div {
     padding-bottom: 50px;
 }
 
@@ -224,8 +224,8 @@ h6 {
 }
 
 .orphan-children-section,
-.who-care-img,
-.header-image {
+.who-care-img,
+.header-image {
     background-position: center center;
     background-size: cover;
 }
@@ -249,10 +249,10 @@ h6 {
 /* ========================================== 2.COMMON CSS END =========================================== */
 /* ========================================== 3.THEME COLOR START ============================================ */
 .navbar-default .navbar-nav.clearfix.fixed-header> li > a.active,
-.navbar-default .navbar-nav > li > a.active,
-.navbar-default .navbar-nav > .active > a,
-.navbar-default .navbar-nav > .active > a:focus,
-.navbar-default .navbar-nav > .active > a:hover {
+.navbar-default .navbar-nav > li > a.active,
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:focus,
+.navbar-default .navbar-nav > .active > a:hover {
     background-color: none;
     color: #fea501 !important;
     border-bottom: 1px dotted #fea501;
@@ -350,7 +350,7 @@ h6 {
 }
 
 .btn:focus,
-.btn:hover {
+.btn:hover {
     color: #ffffff;
 }
 
@@ -444,8 +444,8 @@ h6 {
 }
 
 .progress-bar-inner-3,
-.progress-bar-inner-2,
-.progress-bar-inner-1 {
+.progress-bar-inner-2,
+.progress-bar-inner-1 {
     background-color: #115145;
     height: 3px;
     position: absolute;
@@ -482,7 +482,7 @@ h6 {
 }
 
 .section-3-bg p,
-.section-3-bg h2 {
+.section-3-bg h2 {
     color: #ffffff;
 }
 
@@ -598,7 +598,7 @@ h6 {
 }
 
 .orphan-children-col p,
-.orphan-children-col h2 {
+.orphan-children-col h2 {
     color: #ffffff;
 }
 
@@ -771,12 +771,12 @@ h6 {
 }
 
 .happiest-col h3,
-.wonderful-col h3 {
+.wonderful-col h3 {
     padding-top: 0px;
 }
 
 .happiest-col p,
-.wonderful-col p {
+.wonderful-col p {
     padding: 10px 0 20px 0;
 }
 
@@ -887,7 +887,7 @@ label.error {
 }
 
 .popup-form select,
-.popup-form input {
+.popup-form input {
     font-size: 15px;
     font-weight: 600;
     height: 50px;
@@ -906,10 +906,10 @@ select {
 }
 
 .name,
-.email,
-.phoneno,
-#amounts,
-#price-1 {
+.email,
+.phoneno,
+#amounts,
+#price-1 {
     padding-left: 8px;
     padding-right: 8px;
 }
@@ -1001,8 +1001,8 @@ select {
     }
 
     .contact-row,
-    	.testimonial-div,
-    	.donators-profile {
+    	.testimonial-div,
+    	.donators-profile {
         width: 100%;
     }
 
@@ -1064,29 +1064,29 @@ select {
     }
 
     .contact-row  .col-xs-6,
-    	.help-reduce-row-1 .col-xs-10,
-    	.help-reduce-row-1 .col-xs-2,
-    	.help-reduce-row-1,
-    	.news-row .col-xs-10,
-    	.news-row .col-xs-1,
-    	.news-row {
+    	.help-reduce-row-1 .col-xs-10,
+    	.help-reduce-row-1 .col-xs-2,
+    	.help-reduce-row-1,
+    	.news-row .col-xs-10,
+    	.news-row .col-xs-1,
+    	.news-row {
         margin: 0 auto;
         text-align: center;
         width: 100%;
     }
 
     .help-reduce-space,
-    	.news-space {
+    	.news-space {
         padding-bottom: 40px;
     }
 
     .help-reduce-row-1 .col-xs-2 img,
-    	.news-row .col-xs-1 img {
+    	.news-row .col-xs-1 img {
         padding-bottom: 20px;
     }
 
     .sponsors-row .col-xs-6,
-    	.sponsors-row {
+    	.sponsors-row {
         margin: 0 auto;
         width: 200px;
     }
@@ -1108,14 +1108,14 @@ select {
     }
 
     .btn-cancel ,
-    	#donate-btn {
+    	#donate-btn {
         width: 100%;
     }
 }
 
 @media only screen and (min-width: 481px) and (max-width: 767px) {
     .donators-details,
-    	.donators-profile {
+    	.donators-profile {
         width: 460px;
     }
 
@@ -1194,8 +1194,8 @@ select {
     }
 
     .who-care-col,
-    	.who-care-img,
-    	.contact-row {
+    	.who-care-img,
+    	.contact-row {
         width: 100%;
     }
 
@@ -1216,41 +1216,41 @@ select {
     }
 
     .blog-img,
-    	.blog-col,
-    	.happiest-col,
-    	.happiest-img,
-    	.wonderful-col,
-    	.wonderful-img,
-    	.events-second-row .events-img,
-    	.events-second-row .events-col,
-    	.events-row-1 .events-img,
-    	.events-row-1 .events-col,
-    	.volunteers-row-2 .col-sm-6,
-    	.volunteers-row-1 .col-sm-6,
-    	.relief-camp .col-sm-6 {
+    	.blog-col,
+    	.happiest-col,
+    	.happiest-img,
+    	.wonderful-col,
+    	.wonderful-img,
+    	.events-second-row .events-img,
+    	.events-second-row .events-col,
+    	.events-row-1 .events-img,
+    	.events-row-1 .events-col,
+    	.volunteers-row-2 .col-sm-6,
+    	.volunteers-row-1 .col-sm-6,
+    	.relief-camp .col-sm-6 {
         margin: 0 auto;
         text-align: center;
         width: 100%;
     }
 
     .blog-img img,
-    	.happiest-img img,
-    	.wonderful-img img,
-    	.events-second-row .events-img img,
-    	.events-row-1 .col-sm-6 img,
-    	.volunteers-row-2 .col-sm-6 img,
-    	.volunteers-row-1 .col-sm-6 img,
-    	.relief-camp .col-sm-6 img {
+    	.happiest-img img,
+    	.wonderful-img img,
+    	.events-second-row .events-img img,
+    	.events-row-1 .col-sm-6 img,
+    	.volunteers-row-2 .col-sm-6 img,
+    	.volunteers-row-1 .col-sm-6 img,
+    	.relief-camp .col-sm-6 img {
         margin: 0 auto;
     }
 
     .col-sm-push-6.happiest-img,
-    	.volunteers-row-2  .col-sm-push-6 {
+    	.volunteers-row-2  .col-sm-push-6 {
         left: 0;
     }
 
     .col-sm-pull-6.happiest-col ,
-    	.volunteers-row-2  .col-sm-pull-6 {
+    	.volunteers-row-2  .col-sm-pull-6 {
         right: 0;
     }
 
@@ -1310,9 +1310,9 @@ select {
     }
 
     .moving-col img,
-    	.involvements-col img,
-    	.camps-done-col img,
-    	.various-col img {
+    	.involvements-col img,
+    	.camps-done-col img,
+    	.various-col img {
         padding-bottom: 20px;
     }
 
@@ -1340,60 +1340,5 @@ select {
 @media (min-width:481px) {
     .mobile_structure {
         display: none;
-    }
-}
-
-/* LIGHTBOX STYLE */
-.lightbox {
-    display: none;
-    position: fixed;
-    z-index: 999;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.5);
-
-    .lightbox-video {
-        width: 100%;
-        padding-bottom: 56%;
-    }
-
-    iframe {
-        position: absolute;
-        height: 100%;
-        width: 100%;
-        left: 0;
-        right: 0;
-    }
-
-    img {
-        display: block;
-        margin: 0 auto;
-    }
-
-    .lightbox-close {
-        position: absolute;
-        display: block;
-        top: 10px;
-        right: 10px;
-        color: #ffffff;
-        font-size: 26px;
-        height: 50px;
-        width: 50px;
-        background: rgba(255,255,255,0.3);
-        border: 3px solid #ffffff;
-        border-radius: 50%;
-        line-height: 50px;
-        text-align: center;
-
-        &:hover {
-            text-decoration: none;
-        }
-    }
-
-    .lightbox-container {
-        max-width: 1024px;
-        margin: 100px auto 25px;
     }
 }

@@ -16,45 +16,6 @@
         <link rel="stylesheet" type="text/css" href="css/vendor/font-awesome/dist/font-awesome-animation.min.css"/> 
         <!-- CUSTOM CSS -->         
         <link rel="stylesheet" type="text/css" href="css/custom/style.css"> 
-        <script>
-        $('body').append(`
-    <div class="lightbox">
-      <a href="#lightbox" class="lightbox-close lightbox-toggle">X</a>
-      <div class="lightbox-container">
-        <div class="row">
-          <div class="col-sm-12 lightbox-column">
-            
-          </div>
-        </div>
-      </div>
-    </div>
-  `);
-
-$('.lightbox-toggle').on('click', (event) => {
-  event.preventDefault();
-  $('.lightbox').fadeToggle('fast');
-  
-  let context = $(event.currentTarget).attr('data-lightbox-type');
-  let content = $(event.currentTarget).attr('data-lightbox-content');
-  console.log(event);
-  if (context == 'video') {
-    $('.lightbox-column').append(`
-        <div class="lightbox-video">
-        <iframe src="${content}" frameborder="0" allowfullscreen> </iframe>
-        </div>
-    `);
-  } else if (context == 'image') {
-    $('.lightbox-column').append(`
-        <img src="${content}" class="img-" frameborder="0" allowfullscreen>
-    `);
-  }
-});
-
-$('.lightbox-close').on('click', (event) => {
-  event.preventDefault();
-  $('.lightbox-column > *').remove();
-});
-        </script>
     </head>     
     <body data-spy="scroll" data-target=".navbar-fixed-top" data-offset="75"> 
         <!-- PAGE LAYOUT STARTS HERE -->         
@@ -115,10 +76,14 @@ $('.lightbox-close').on('click', (event) => {
         <!--================================= VARIOUS CAUSES ENDS ==========================================-->         
         <!--================================= WHO WE CARE START ==========================================-->         
         <section class="section-3-bg who-care-section" id="about"> 
+            <div id="headerPopup" class="mfp-hide embed-responsive embed-responsive-21by9">
+                <video class="embed-responsive-item" src="images/Liberty%20Promo%20-%20V6.mp4">Your browser doesn't support HTML5 video tag.</video>
+                <!--<iframe class="embed-responsive-item" width="854" height="480" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>-->
+            </div>
             <div class="container-fluid no_padding"> 
                 <div class="row no-row"> 
                     <div class="col-sm-6 who-care-img">
-                        <a href="#lightbox" class="lightbox-toggle" data-lightbox-type="video" data-lightbox-content="https://www.youtube.com/embed/lapu8oJLtzY"><img src="images/play_overlay.png" style="margin: auto; object-fit: cover; opacity: .7;" width="100%"/></a>
+                        <a ref="#headerPopup" id="headerVideoLink" target="_blank"><img src="images/play_overlay.png" style="margin: auto; object-fit: cover;" width="100%"/></a>
                     </div>                     
                     <div class="col-sm-6 who-care-col"> 
                         <div class="heading-div-1"> 
@@ -131,7 +96,7 @@ $('.lightbox-close').on('click', (event) => {
                         </div>                         
                     </div>                     
                 </div>                 
-            </div>
+            </div>             
         </section>         
         <!--================================= WHO WE CARE ENDS ==========================================-->         
         <!--================================= HELPS TO REDUCE START ==========================================-->         
@@ -258,6 +223,13 @@ $('.lightbox-close').on('click', (event) => {
         <script src="js/vendor/popup/jquery.popupoverlay.js"></script>         
         <!-- THEME JS -->         
         <script src="js/custom/custom.js"></script>         
-        <!-- CUSTOM -->
+        <script>
+        $(document).ready(function() {
+  $('#headerVideoLink').magnificPopup({
+    type:'inline',
+    midClick: true // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
+  });         
+});
+        </script>
     </body>     
 </html>

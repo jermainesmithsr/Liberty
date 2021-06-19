@@ -35,7 +35,6 @@ progress,
 video {
     display: inline-block;
     vertical-align: baseline;
-    width: 100%;
 }
 
 audio:not([controls]) {
@@ -1445,8 +1444,6 @@ figure {
 
 img {
     vertical-align: middle;
-    max-width: 100%;
-    max-height: 100%;
 }
 
 .carousel-inner>.item>a>img,
