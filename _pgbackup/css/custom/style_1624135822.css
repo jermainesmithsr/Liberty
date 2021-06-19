@@ -587,11 +587,10 @@ h6 {
     padding-bottom: 20px;
 }
 
-@media (max-width:480px) {
-    .orphan-children-section {
-        background-image: url('../../images/image2.jpg');
-        margin-top: 80px;
-    }
+.orphan-children-section {
+    background-image: url('../../images/image2.jpg');
+    background-attachment: fixed;
+    margin-top: 80px;
 }
 
 .orphan-children-col {
