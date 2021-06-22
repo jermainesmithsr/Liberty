@@ -484,6 +484,7 @@ h6 {
 .who-care-img {
     background-image: url('../../images/vidposter.png');
     background-size: cover;
+    height: 525px;
 }
 
 .who-care-col {
