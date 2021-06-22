@@ -482,8 +482,8 @@ h6 {
 /* ============================================= 7.SECTION : VARIOUS CAUSES END =============================================== */
 /* ============================================= 8.SECTION : WHO WE CARE START =============================================== */
 .who-care-img {
-    background-image: url('../../images/JuneteenthBLMProtestLA2020_DSC_8519.jpg');
-    height: 535px;
+    background-image: url('../../images/vidposter.png');
+    background-size: cover;
 }
 
 .who-care-col {
@@ -1378,7 +1378,7 @@ select {
 }
 
 .blackOut .popupAlignCenter .popUpWrapper {
-    width: 80%;
+    width: 100%;
     max-width: 1280px;
     max-height: 640px;
     background-color: #fff;
